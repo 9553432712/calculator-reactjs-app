@@ -1,10 +1,8 @@
 import './App.css';
 import Screen from './components/Screen';
-// import ButtonBox from './components/ButtonBox';
+import ButtonBox from './components/ButtonBox';
 import Button from './components/Button';
-// import Wrapper from './components/Wrapper';
-import './components/ButtonBox.css'
-import './components/Wrapper.css'
+import Wrapper from './components/Wrapper';
 import React, { useState } from "react";
 
 
@@ -73,7 +71,7 @@ function App() {
         return a + b;
       case '-':
         return a - b;
-      case '*':
+      case 'X':
         return a * b;
       case '/':
         return a / b;
@@ -85,9 +83,9 @@ function App() {
   var result = 'bye';
   try {
     result =
-      <div className='wrapper'>
+      <Wrapper>
         <Screen value={calc.num ? calc.num : calc.res}></Screen>
-        <div className='buttonBox'>
+        <ButtonBox>
           {
             btnValues.flat().map((obj, i) => {
               return (
@@ -95,13 +93,13 @@ function App() {
                   key={i}
                   value={obj}
                   className={obj === '=' ? 'equals' : ''}
-                  onClick={obj === 'C' ? resetClickHandler : obj === '+' || obj === '-' || obj === '*' || obj === '/' ? signClickHandler : obj === '=' ? equalsClickHandler : valueHandler}
+                  onClick={obj === 'C' ? resetClickHandler : obj === '+' || obj === '-' || obj === 'X' || obj === '/' ? signClickHandler : obj === '=' ? equalsClickHandler : valueHandler}
                 />
               );
             })
           }
-        </div>
-      </div>
+        </ButtonBox>
+      </Wrapper>
   } catch (error) {
     console.error('error in App ----> ' + error);
   }

@@ -1,9 +1,9 @@
 import './ButtonBox.css'
 
-const ButtonBox = ({ child }) => {
+const ButtonBox = (props ) => {
     return (
         <div className='buttonBox'>
-            button box is {child}
+            {props.children}
         </div>
     );
 };
