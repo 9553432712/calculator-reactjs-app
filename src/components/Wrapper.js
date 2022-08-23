@@ -1,4 +1,4 @@
-import './Wrapper.css'
+import '../style/Wrapper.css'
 
 const Wrapper = (props) => {
     var result='hhhhhhhh';

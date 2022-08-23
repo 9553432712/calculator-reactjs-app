@@ -1,4 +1,4 @@
-import './ButtonBox.css'
+import '../style/ButtonBox.css'
 
 const ButtonBox = (props ) => {
     return (

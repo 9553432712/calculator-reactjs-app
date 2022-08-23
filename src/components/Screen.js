@@ -1,4 +1,4 @@
-import './Screen.css'
+import '../style/Screen.css'
 
 
 const Screen = ({ value }) => {
